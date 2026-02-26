@@ -138,9 +138,9 @@ export function ChatArea({ conversationId, currentClerkId, onBack }: ChatAreaPro
   let typingText = "";
   if (typingUsers && typingUsers.length > 0) {
     const typingIds = typingUsers.map((t) => t.userId);
-    const typingPeople = otherUsers.filter((u) => typingIds.includes(u.clerkId));
+    const typingPeople = otherUsers.filter((u) =>u && typingIds.includes(u.clerkId));
     if (typingPeople.length === 1) {
-      typingText = `${typingPeople[0].name} is typing`;
+      typingText = `${typingPeople[0]?.name} is typing`;
     } else if (typingPeople.length > 1) {
       typingText = "Several people are typing";
     }
@@ -206,7 +206,7 @@ export function ChatArea({ conversationId, currentClerkId, onBack }: ChatAreaPro
           messages.map((msg, idx) => {
             const prevMsg = messages[idx - 1];
             const isMine = msg.senderId === currentClerkId;
-            const senderUser = otherUsers.find((u) => u.clerkId === msg.senderId);
+            const senderUser = otherUsers.find((u) =>u && u.clerkId === msg.senderId);
             const showAvatar = isGroup && !isMine && (
               !prevMsg || prevMsg.senderId !== msg.senderId
             );
