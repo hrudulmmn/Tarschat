@@ -13,12 +13,13 @@ interface UserSearchProps {
 }
 
 export function UserSearch({ currentClerkId, searchQuery, onSelectUser }: UserSearchProps) {
-  const users = useQuery(
-    searchQuery ? api.users.searchUsers : api.users.getAllUsers,
-    searchQuery
-      ? { query: searchQuery, currentClerkId }
-      : { currentClerkId }
-  );
+  const allUsers = useQuery(api.users.getAllUsers, { currentClerkId });
+const searchedUsers = useQuery(
+  api.users.searchUsers,
+  searchQuery ? { query: searchQuery, currentClerkId } : "skip"
+);
+
+const users = searchQuery ? searchedUsers : allUsers;
   const getOrCreateDirect = useMutation(api.conversations.getOrCreateDirect);
 
   const handleSelectUser = async (otherClerkId: string) => {
