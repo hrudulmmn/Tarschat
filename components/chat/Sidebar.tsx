@@ -31,7 +31,7 @@ export function Sidebar({ currentClerkId, selectedConversationId, onSelectConver
       {/* Header */}
       <div className="p-4 border-b border-none bg-zinc-800">
         <div className="flex items-center justify-between mb-3">
-          <h1 className="text-xl font-bold text-white">💬 Tars Chat</h1>
+          <h1 className="text-xl font-bold text-white">💬 Urai</h1>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setShowGroupModal(true)}

@@ -60,7 +60,7 @@ export function ChatLayout() {
           <div className="flex-1 flex items-center justify-center bg-violet-800">
             <div className="text-center">
               <div className="text-6xl mb-4">💬</div>
-              <h2 className="text-2xl font-semibold text-gray-300 mb-2">Welcome to Tars Chat</h2>
+              <h2 className="text-2xl font-semibold text-gray-300 mb-2">Welcome to Urai</h2>
               <p className="text-green-400">Select a conversation or start a new one</p>
             </div>
           </div>

@@ -6,7 +6,7 @@ import { Providers } from "@/lib/providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tars Chat",
+  title: "Urai",
   description: "Real-time chat application",
 };
 

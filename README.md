@@ -1,4 +1,4 @@
-# 💬 Tars Chat — Full-Stack Real-Time Chat App
+# 💬 Urai — Full-Stack Real-Time Chat App
 
 A complete real-time messaging application built with Next.js 14, Convex, and Clerk.
 
@@ -86,7 +86,7 @@ Open [http://localhost:3000](http://localhost:3000)
 ## Project Structure
 
 ```
-tars-chat/
+urai/
 ├── app/
 │   ├── layout.tsx           # Root layout with providers
 │   ├── page.tsx             # Redirect to /chat or /sign-in
